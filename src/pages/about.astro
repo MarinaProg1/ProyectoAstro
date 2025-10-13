@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <body>
+    <section class="about">
+      <div class="imagen">
+        <img src="/src/images/aboutPCT.svg" alt="" />
+      </div>
+      <div class="text">
+        <h1>Sobre mí</h1>
+        <p>
+          Mi nombre es Marina López, egresada de la Tecnicatura en Programación
+          de la Universidad Tecnológica Nacional. Soy desarrolladora Full Stack
+          con una sólida base en programación y desarrollo de aplicaciones.
+        </p>
+        <p>
+          A lo largo de mi trayectoria académica y profesional, he trabajado con
+          diversos lenguajes de programación, entre ellos C, C++, Java y PHP. No
+          obstante, mi principal especialización se encuentra en C#, con el cual
+          he desarrollado proyectos de alcance profesional orientados a la
+          resolución de necesidades reales y a la creación de soluciones
+          eficientes.
+        </p>
+        <p>
+          De manera complementaria, he profundizado en el desarrollo web
+          utilizando tecnologías como HTML, CSS, JavaScript, React y Astro,
+          además de contar con experiencia en el manejo de bases de datos como
+          SQL Server y MySQL.
+        </p>
+        <p>
+          Actualmente, me encuentro enfocada en seguir fortaleciendo mis
+          habilidades técnicas y en integrarme a proyectos que me permitan
+          aportar valor, combinando conocimientos, dedicación y una constante
+          búsqueda de aprendizaje y mejora profesional.
+        </p>
+      </div>
+    </section>
+  </body>
+</Layout>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+     background-color: rgb(37, 44, 44);
+    box-sizing: border-box;
+    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+      Arial, sans-serif;
+  }
+  h1 {
+    color: rgb(214, 24, 173);
+  }
+  p {
+    color: #f3ecec;
+  }
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    font-size: 16px;
+    height: 100%;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+  }
+  .text{
+    background-color: rgba(0, 0, 0, 0.178);
+    padding: 10px;
+    width: 65%;
+    height: 100%;
+    margin-left: -220px;
+  }
+</style>
