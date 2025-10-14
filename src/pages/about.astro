@@ -3,13 +3,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <body>
     <section class="about">
       <div class="imagen">
         <img src="/src/images/aboutPCT.svg" alt="" />
       </div>
       <div class="text">
-        <h1>Sobre mí</h1>
+        <h2>Sobre mí</h2>
         <p>
           Mi nombre es Marina López, egresada de la Tecnicatura en Programación
           de la Universidad Tecnológica Nacional. Soy desarrolladora Full Stack
@@ -37,20 +36,13 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
     </section>
-  </body>
 </Layout>
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-     background-color: rgb(37, 44, 44);
-    box-sizing: border-box;
-    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
-      Arial, sans-serif;
-  }
-  h1 {
-    color: rgb(214, 24, 173);
+  h2 {
+    font-size: 32px;
+    color: #7c76cc;
+
   }
   p {
     color: #f3ecec;
@@ -59,18 +51,34 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 80%;
     font-size: 16px;
     height: 100%;
-    margin: 15px;
     padding: 10px;
     text-align: center;
+    overflow: hidden; 
   }
   .text{
-    background-color: rgba(0, 0, 0, 0.178);
     padding: 10px;
-    width: 65%;
-    height: 100%;
-    margin-left: -220px;
+    width: 60%;
+    height: 80%;
+    margin-left: -80px;
+    transform: translateX(1500px);
+    animation: irIzquierda 2s ease forwards;
   }
+  .imagen{
+    transform: translateX(-500px);
+    animation: irDerecha 2s ease forwards;
+  }
+
+@keyframes irDerecha {
+  100%{
+    transform: translateX(0);
+  }
+}
+  @keyframes irIzquierda {
+  100%{
+    transform: translateX(0);
+  }
+}
 </style>

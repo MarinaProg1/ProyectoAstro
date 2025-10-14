@@ -1,18 +1,10 @@
 ---
-
+import Layout from "../layouts/Layout.astro"
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Porfolio Astro</title>
-  </head>
+<Layout>
+
 <div id="container">
-  <main>
-   
+
     <h1>Marina López</h1>
      <h2>Desarrolladora fullstack</h2>
     <div class="activar">
@@ -22,20 +14,16 @@
       </div>
       
     </div>
-  </main>
 </div>
+</Layout>
 
 <style>
-  html,
-  body {
-    background-color: rgb(37, 44, 44);
-    height: 100%;
-    margin: 0;
-  }
+ 
   #container {
-  
+    display: flex;
+    flex-direction: column;
     font-family: sans-serif;
-    height: 100vh;
+    height: 90vh;
   }
 
  h1{
@@ -54,45 +42,28 @@
   padding: 5px;
   margin-bottom: 10px;
  }
-  main {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .activar {
     position: relative;
-    width: 650px;
-    height: 330px;
+    width: 600px;
+    height: 300px;
     background: linear-gradient(#4c84d9, #7c76cc);
     border: 6px solid #f5cee7;
     border-radius: 170px;
   }
-
   .avatar {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border: 6px solid #f5cee7;
     border-radius: 50%;
     background: linear-gradient(#f041ff 20%, #0a0a0a);
     overflow: hidden;
     display: flex;
-    top: 10px;
-    left: 10px;
+    top: 5px;
+    left: 5px;
   }
 
   @media screen and (max-width: 768px) {
-    #container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #hero {
-      display: block;
-      padding-top: 10%;
-    }
+    
   }
 </style>
