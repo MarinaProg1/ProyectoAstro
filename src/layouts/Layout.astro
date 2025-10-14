@@ -1,3 +1,7 @@
+---
+const { class: className = "" } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,21 +13,19 @@
   </head>
 
   <body>
-
-    <nav class="nav">
-        <a href="/">Inicio</a> 
-        <a href="/about/">Sobre mi</a> 
-        <a href="/blog/">Blog</a> 
-        <a href="/blog/">Blog</a> 
-        <a href="/blog/">Blog</a> 
+    <nav class={"nav" + className}>
+      <a href="/">Inicio</a>
+      <a href="/about/">Sobre mi</a>
+      <a href="/blog/">Blog</a>
+      <a href="/blog/">Blog</a>
+      <a href="/blog/">Blog</a>
     </nav>
 
     <main>
       <slot />
     </main>
 
-    <footer>
-      
+    <footer class={className}>
       <div>
         <p>© 2025 Marina Natalia López. Hecho con ❤️ y código.</p>
       </div>
@@ -32,41 +34,52 @@
           href="https://www.linkedin.com/in/marina-lopez-a257b9319"
           rel="noopener noreferrer"
           target="_blank"
-          aria-label="Enlace a linkedin de Marina López">
+          aria-label="Enlace a linkedin de Marina López"
+        >
           <img src="/src/images/linkedin.png" />
         </a>
-        <a href="https://github.com/MarinaProg1" rel="noopener noreferrer" target="_blank" aria-label="Enlace a la repositorio de git Hub">
+        <a
+          href="https://github.com/MarinaProg1"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="Enlace a la repositorio de git Hub"
+        >
           <img src="/src/images/social.png" />
         </a>
         <br />
-        <a href="https://www.flaticon.com/free-icons/github" rel="noopener noreferrer" target="_blank" title="github icons" class="hidden">Icons by iconsmind - Flaticon</a>
-      
+        <a
+          href="https://www.flaticon.com/free-icons/github"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="github icons"
+          class="hidden">Icons by iconsmind - Flaticon</a
+        >
       </div>
     </footer>
   </body>
-
 </html>
-
 
 <style>
   html,
   body {
-     background-color: rgba(35, 34, 61, 0.829);
-     box-sizing: border-box;
-     font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
-     margin: 0;
-     padding: 0;
-     width: 100vw;
-     min-height: 100vh;
-     display: flex;
-     flex-direction: column;
-     justify-content: center; 
-     align-items: center;     
-     text-align: center;
+    background-color: rgba(35, 34, 61, 0.829);
+    box-sizing: border-box;
+    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+      Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   main {
     flex: 1;
     height: 100%;
+    width: 100vw;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -76,11 +89,11 @@
   }
   footer {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     background-color: rgb(80, 80, 128);
     padding: 10px;
-    width: 100%;
+    width: 100vw;
     height: 100px;
   }
   a {
@@ -103,4 +116,30 @@
     align-items: center;
     top: 0;
   }
+  /* Estado base: oculto pero transicionable */
+.oculto {
+  opacity: 0;
+  transform: translateY(-15px) scale(0.98);
+  filter: blur(4px);
+  pointer-events: none;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+/* Estado visible: animación suave */
+.mostrar {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  pointer-events: auto;
+  transition:
+    opacity 2s ease,
+    transform 2s ease,
+    filter 2s ease;
+}
+
+
+  
 </style>
