@@ -7,7 +7,7 @@ import Layout from "../layouts/Layout.astro"
   const footer = document.querySelector("footer");
    
   imagen?.addEventListener("click", ()=>{
-     if (imagen.classList.contains("activo")) {
+    if (imagen.classList.contains("activo")) {
             imagen.classList.remove("activo");
              nav?.classList.add("oculto");
              footer?.classList.add("oculto");
@@ -58,29 +58,31 @@ import Layout from "../layouts/Layout.astro"
  }
   .activar {
     position: relative;
-    width: 600px;
-    height: 300px;
+    width: 500px;
+    height: 250px;
     background: linear-gradient(#4c84d9, #7c76cc);
     border: 6px solid #f5cee7;
     border-radius: 170px;
   }
   .avatar {
     position: absolute;
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border: 6px solid #f5cee7;
     border-radius: 50%;
     background: linear-gradient(#f041ff 20%, #0a0a0a);
     cursor: pointer;
     overflow: hidden;
     display: flex;
-    top: 5px;
+    top: 7px;
     left: 5px;
     transition: transform 1s ease-in-out;
   }
   .activo{
-    transform: translateX(300px);
+    transform: translateX(260px);
   }
+
+
   @media screen and (max-width: 768px) {
     
   }
