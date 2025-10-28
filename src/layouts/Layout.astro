@@ -17,7 +17,6 @@ import NavBar from "../components/NavBar.astro";
     <main>
       <slot />
     </main>
-
     <footer>
       <div>
         <p>© 2025 Marina Natalia López. Hecho con ❤️ y código.</p>
@@ -49,14 +48,12 @@ import NavBar from "../components/NavBar.astro";
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
   }
   main {
     flex: 1;
-    max-height: 600px;
-    max-width: 1200px;
+   height: 100%;
+    max-width: 90%;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -68,11 +65,15 @@ import NavBar from "../components/NavBar.astro";
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(80, 80, 128);
+    background-color: #57556e23;
     padding: 10px;
     width: 100vw;
-    height: 100px;
+    height: 150px;
+    animation: aparecer 4s ease;
   }
   
-  
+   @keyframes aparecer{
+    0%{transform:scale(0); opacity:0;}
+    100%{transform:scale(1); opacity: 1;}
+   }
 </style>

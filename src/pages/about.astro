@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
     <section class="about">
       <div class="imagen">
-        <img src="/src/images/aboutPCT.svg" alt="" />
+        <img src="/src/images/Foto1.png" alt="mi foto" />
       </div>
       <div class="text">
         <h2>Sobre mí</h2>
@@ -41,10 +41,11 @@ import Layout from "../layouts/Layout.astro";
 <style>
   h2 {
     font-size: 32px;
-    color: #7c76cc;
+    color: crimson;
 
   }
-  p {
+  p{
+    font-size: 1.2rem;
     color: #f3ecec;
   }
   .about {
@@ -59,14 +60,20 @@ import Layout from "../layouts/Layout.astro";
     overflow: hidden; 
   }
   .text{
+    margin: 10px;
     padding: 10px;
     width: 60%;
     height: 80%;
-    margin-left: -80px;
     transform: translateX(1500px);
     animation: irIzquierda 2s ease forwards;
   }
   .imagen{
+    background-color: 
+    #f3ecec0e;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
     transform: translateX(-500px);
     animation: irDerecha 2s ease forwards;
   }
