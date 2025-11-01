@@ -1,31 +1,31 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Avatar from "./Avatar.astro"
-import TituloPres from "./TituloPres.astro"
+import Avatar from "./Avatar.astro";
+import TituloPres from "./TituloPres.astro";
 ---
 
-  <Layout>
-    <div class="welcome">
-       <TituloPres/>
-       <Avatar/>
-    </div>
-</Layout>
+<section class="welcome">
+  <TituloPres />
+  <Avatar />
+</section>
 <style>
-  .welcome{
+  .welcome {
+    padding-top: 70px;
     display: flex;
-    width: 80vw;
-    height: 100%;
-    padding: 15px;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1200px; /* no crece más allá de este tamaño */
+    height: 100vh;
+
+    /*width: 80vw;
+    height: 100%;*/
+    padding: 10px;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-   @media screen and (max-width: 768px) {
-    .welcome{
-      flex-direction:column ;
+  @media screen and (max-width: 768px) {
+    .welcome {
+      flex-direction: column;
     }
   }
-  </style>
-  
+</style>

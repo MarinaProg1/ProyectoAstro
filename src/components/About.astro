@@ -1,12 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-    <section class="about">
-      <div class="imagen">
-        <img src="/src/images/Foto1.png" alt="mi foto" />
-      </div>
+    <div class="about">
+      
       <div class="text">
         <h2>Sobre mí</h2>
         <p>
@@ -35,8 +31,10 @@ import Layout from "../layouts/Layout.astro";
           búsqueda de aprendizaje y mejora profesional.
         </p>
       </div>
-    </section>
-</Layout>
+      <div class="imagen">
+        <img src="/src/images/Foto1.png" alt="mi foto" />
+      </div>
+    </div>
 
 <style>
   h2 {
@@ -55,7 +53,7 @@ import Layout from "../layouts/Layout.astro";
     width: 80%;
     font-size: 16px;
     height: 100%;
-    padding: 10px;
+    padding: 70px 10px 10px 10px;
     text-align: center;
     overflow: hidden; 
   }
@@ -64,6 +62,7 @@ import Layout from "../layouts/Layout.astro";
     padding: 10px;
     width: 60%;
     height: 80%;
+    text-align: start;
     transform: translateX(1500px);
     animation: irIzquierda 2s ease forwards;
   }
@@ -88,4 +87,21 @@ import Layout from "../layouts/Layout.astro";
     transform: translateX(0);
   }
 }
+
+
+ @media (max-width: 768px) {
+  .about{
+    flex-direction: column;
+   
+  }
+.text{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    
+  }
+
+  
+ }
 </style>

@@ -186,6 +186,7 @@
   <style>
    .content {
   position: relative;
+   padding-top: 70px;
   width: 600px;
   height: 400px;
   display: flex;
@@ -213,7 +214,9 @@
   opacity: 0;
   width: 45px;
   height: 45px;
-  offset-path: path("M 340,110 A 130,130 0 1,1 339.9,370 A 130,130 0 1,1 340,110");
+  offset-path: path("M 340,190 A 200,200 0 1,1 340,590 A 200,200 0 1,1 340,190");
+
+
   offset-distance: 0%;
   offset-rotate: 0deg;
   animation: orbitar 10s linear infinite;
@@ -286,12 +289,15 @@ from {
     display: flex;
     flex-direction: column;
     width: 90vw;
-    height: 60vw;
+    height: 90vh;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
   }
 
   .images img {
     display: none;
   }
-}
-
+ 
+    }
   </style>
