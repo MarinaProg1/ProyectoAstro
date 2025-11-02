@@ -2,6 +2,9 @@
 ---
 
     <div class="about">
+      <div class="imagen">
+        <img src="/images/Foto1.png" alt="mi foto" />
+      </div>
       
       <div class="text">
         <h2>Sobre mí</h2>
@@ -31,11 +34,8 @@
           búsqueda de aprendizaje y mejora profesional.
         </p>
       </div>
-      <div class="imagen">
-        <img src="/src/images/Foto1.png" alt="mi foto" />
-      </div>
+      
     </div>
-
 <style>
   h2 {
     font-size: 32px;
@@ -44,36 +44,41 @@
   }
   p{
     font-size: 1.2rem;
-    color: #f3ecec;
+    color:bisque;
   }
   .about {
     display: flex;
+    background-color: rgba(0, 0, 0, 0.212);
     justify-content: center;
     align-items: center;
-    width: 80%;
+    margin: 0 auto; 
+    width: 90%;
     font-size: 16px;
     height: 100%;
-    padding: 70px 10px 10px 10px;
-    text-align: center;
-    overflow: hidden; 
+    padding: 20px 10px 10px 10px;
+    border-radius: 20px;
+    text-align: center; 
+    gap: 10px;
   }
   .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     margin: 10px;
     padding: 10px;
-    width: 60%;
+    width: 70%;
     height: 80%;
-    text-align: start;
-    transform: translateX(1500px);
+    text-align: center;
     animation: irIzquierda 2s ease forwards;
   }
   .imagen{
-    background-color: 
-    #f3ecec0e;
+    background-color:#6b63630e;
     width: 300px;
     height: 300px;
+    margin: 15px;
     border-radius: 50%;
     overflow: hidden;
-    transform: translateX(-500px);
     animation: irDerecha 2s ease forwards;
   }
 
