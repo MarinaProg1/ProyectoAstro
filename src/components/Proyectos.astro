@@ -1,6 +1,48 @@
 ---
+import Lenguaje from "../components/Lenguaje.astro";
+import CardProyect from "../components/CardProyect.astro";
 ---
-<section class="content-pro">
 
-    <h1>Aca van los proyectos</h1>
+<section id="proyect">
+  <h2>Proyectos</h2>
+  <div class="card-pro">
+    <CardProyect
+      href="/images/web1.png"
+      titulo=" Proyect one"
+      descripcion="Esta es una prueba para ver como se ve la card"
+      lenguajes={[
+        { href: "/images/linkedin.png", name: "HTML" },
+        { href: "/images/linkedin.png", name: "CSS" },
+      ]}
+    />
+    <CardProyect
+      href="#"
+      titulo=" Proyect two"
+      descripcion="Esta la segunda prueba para ver como se ve la card"
+      lenguajes={[{ href: "/images/linkedin.png", name: "Linkedin" }]}
+    />
+  </div>
 </section>
+
+<style>
+  #proyect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+  }
+  h2 {
+    font-size: 32px;
+    color: crimson;
+
+  }
+
+  .card-pro { 
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+</style>

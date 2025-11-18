@@ -1,0 +1,33 @@
+---
+interface Props {
+    href: string;
+    name:string;
+}
+const{href,name}= Astro.props;
+---
+
+<div class="leng">
+    <img src={href} alt={name}/>
+    <div>{name}</div>
+</div>
+<style>
+    .leng{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #3d3b3c;
+        border-radius: 30px;
+        padding: 8px;
+        max-width: 150px;
+        height: 20px;
+        background-color: rgba(21, 6, 56, 0.062);
+        color: crimson;
+        font-size: 18px;
+        gap: 5px;
+    }
+    .leng img{
+        width: 20px;
+        height: 20px;
+    }
+    
+</style>

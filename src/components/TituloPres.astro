@@ -5,8 +5,10 @@
 <div class="titulo">
   <h2>Bienvenidos a mi porfolio!!!</h2>
   <h1>
-    <span>MARINA</span>
-    <span>LÓPEZ</span>
+    <span class="llave">&#123</span> 
+    <span> MARINA</span>
+    <span>LÓPEZ </span>
+    <span class="llave">&#125</span>
   </h1>
 
   <h2>Desarrolladora de software fullstack</h2>
@@ -25,14 +27,19 @@
   h1 {
     padding: 0;
     margin: 0;
-    font-size: 3.5rem;
-    color: crimson;
+    font-size: 4.2rem;
+    color:crimson;
+    animation: aparecer 4s ease;
+     transition: font-size 0.3s ease;
+  }
+ 
+  h2 {
+    font-size: 2.4rem;
+    color: #e3e7b8;
     animation: aparecer 4s ease;
   }
-  h2 {
-    font-size: 2rem;
-    color: bisque;
-    animation: aparecer 4s ease;
+  .llave{
+    color: #14DCB4;
   }
   .titulo {
     display: flex;
