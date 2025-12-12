@@ -1,26 +1,31 @@
 ---
-import '@fontsource/ubuntu-mono';
+import "@fontsource/ubuntu-mono";
 ---
 
 <nav>
-  <a href=#inicio>Inicio</a>
-  <a href=#about>Sobre mi</a>
-  <a href=#proyect>Proyectos</a>
-  <a href=#contactame>Contactame</a>
+
+  <!-- MENU DESKTOP -->
+  <div class="menu-desktop">
+    <img src="/public/images/LOGO.svg" class="logoI" />
+    <a href="#inicio">Inicio</a>
+    <a href="#about">Sobre mi</a>
+    <a href="#proyect">Proyectos</a>
+    <a href="#contactame">Contactame</a>
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <div class="menu-mobile" id="menu-mobile">
+    <a href="#inicio">Inicio</a>
+    <a href="#about">Sobre mi</a>
+    <a href="#proyect">Proyectos</a>
+    <a href="#contactame">Contactame</a>
+  </div>
 </nav>
+
 <style>
-  a {
-    text-decoration: none;
-    font-family: 'Ubuntu Mono', monospace;
-    font-size: 1.4rem;
-    margin: 10px;
-    color:#e3e7b8;
-    letter-spacing: 1.5px;
-  }
-  a:hover {
-    color: crimson;
-    transform: scale(1.2);
-  }
+  
+ 
   nav {
     z-index: 2;
     position: fixed;
@@ -28,16 +33,89 @@ import '@fontsource/ubuntu-mono';
     height: 50px;
     margin-top: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #14DCB4;
+    border-bottom: 2px solid #14dcb4;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
     align-items: center;
     top: 0;
   }
-  @media screen and (max-width: 768px) {
-    nav{
-      display:none;
-    }
- 
+  .logoI {
+    width: 75px;
+    height: 75px;
   }
+  .menu-desktop {
+  display: flex;
+  gap: 30px;
+}
+
+/* ❌ No ocultes los <a> directamente */
+.menu-mobile a,
+.menu-desktop a {
+  text-decoration: none;
+  font-family: "Outfit Variable", sans-serif;
+  font-size: 1.4rem;
+  margin: 10px;
+  color: #e3e7b8;
+  letter-spacing: 1.5px;
+}
+
+/* Hover */
+.menu-desktop a:hover,
+.menu-mobile a:hover {
+  color: crimson;
+  transform: scale(1.2);
+}
+
+/* BOTÓN HAMBURGUESA: oculto en pantallas grandes */
+.menu-toggle {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #14dcb4;
+}
+
+/* MENÚ MOBILE: oculto por defecto */
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: hsla(250, 91%, 9%, 0.719);
+  width: 100%;
+  height:80vh;
+  padding: 20px;
+  border-left: 2px solid #14dcb4;
+  border-bottom: 2px solid #14dcb4;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  /* Oculta el menú de escritorio */
+  .menu-desktop {
+    display: none;
+  }
+
+  /* Muestra el botón hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+}
+
 </style>
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu-mobile");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.style.display = menu.style.display === "flex"
+        ? "none"
+        : "flex";
+    });
+  }
+</script>
+

@@ -9,8 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/outfit": "^5.2.8",
     "@fontsource/ubuntu-mono": "^5.2.8",
     "astro": "^5.14.4",
     "vite": "^7.2.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   }
 }
