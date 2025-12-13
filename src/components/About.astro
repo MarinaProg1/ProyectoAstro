@@ -1,7 +1,7 @@
 ---
 ---
 
-    <div class="about">
+    <div class="about - aparece">
       <div class="imagen">
         <img src="/images/mifoto3.png" alt="mi foto" />
       </div>
@@ -88,6 +88,16 @@
   width: 100%;
   height: 100%;
 }
+.aparece {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease-out;
+}
+
+.aparece.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 @keyframes irDerecha {
   100%{
     transform: translateX(0);
@@ -120,3 +130,18 @@
   
  }
 </style>
+<script is:client:true;>
+  const elementos = document.querySelectorAll(".aparece");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible"); // se muestra
+      }
+    });
+  }, {
+    threshold: 0.2 // se activa cuando el 20% del elemento es visible
+  });
+
+  elementos.forEach(el => observer.observe(el));
+</script>

@@ -3,23 +3,92 @@ import Lenguaje from "../components/Lenguaje.astro";
 import CardProyect from "../components/CardProyect.astro";
 ---
 
-<section id="proyect">
+<script src="/src/scripts/app.js"></script>
+<section id="proyect" >
   <h2>Proyectos</h2>
-  <div class="card-pro">
+  <div class="card-pro" class="aparece">
     <CardProyect
       href="/images/web1.png"
-      titulo=" Proyect one"
-      descripcion="Esta es una prueba para ver como se ve la card"
+      titulo="App Web MVC"
+      descripcion="Web de Remates MVC con C#"
       lenguajes={[
-        { href: "/images/linkedin.png", name: "HTML" },
-        { href: "/images/linkedin.png", name: "CSS" },
+        { name: ".Net" },
+        { name: "C#" },
+        { name: "SQL Server" },
+        { name: "HTML" },
+        { name: "CSS" },
       ]}
     />
     <CardProyect
-      href="#"
-      titulo=" Proyect two"
-      descripcion="Esta la segunda prueba para ver como se ve la card"
-      lenguajes={[{ href: "/images/linkedin.png", name: "Linkedin" }]}
+      href="/images/api3.png"
+      titulo="Api Rest"
+      descripcion="Api , backend App Remates"
+      lenguajes={[
+        { name: ".Net" },
+        { name: "C#" },
+        { name: "JWT" },
+        { name: "SQL Server" },
+        { name: "Swagger" },
+      ]}
+    />
+    <CardProyect
+      href="/images/web-php1.png"
+      titulo="App Web PHP"
+      descripcion="App Web Tienda online en PHP"
+      lenguajes={[
+        { name: "Laravel" },
+        { name: "PHP" },
+        { name: "MySQL" },
+        { name: "HTML" },
+        { name: "CSS" },
+      ]}
+    />
+    <CardProyect
+      href="/images/web-gla2.png"
+      titulo="Web React"
+      descripcion="Pagina Web Glamping en Reacr"
+      lenguajes={[
+        { name: "Vite" },
+        { name: "React" },
+        { name: "HTML" },
+        { name: "CSS" },
+        { name: "JavaScript" },
+      ]}
+    />
+    <CardProyect
+      href="/images/porfoliohtml.png"
+      titulo="Porfolio html"
+      descripcion="Porfolio realizado en HTML,CSS y JavaScrip"
+      lenguajes={[
+       { name: "HTML" },
+        { name: "CSS" },
+        { name: "JavaScript" },
+      ]}
+    />
+   <CardProyect
+      href="/images/web-reclamos.png"
+      titulo="Api rest"
+      descripcion="Api, backend Reclamos"
+      lenguajes={[
+       { name: ".Net" },
+        { name: "C#" },
+        { name: "JWT" },
+        { name: "SQL Server" },
+        { name: "Swagger" },
+      ]}
+    />
+
+    <CardProyect
+      href="/images/apiReclamoV.png"
+      titulo="Api rest"
+      descripcion="Api, backend Reclamos"
+      lenguajes={[
+       { name: ".Net" },
+        { name: "C#" },
+        { name: "JWT" },
+        { name: "SQL Server" },
+        { name: "Swagger" },
+      ]}
     />
   </div>
 </section>
@@ -31,17 +100,27 @@ import CardProyect from "../components/CardProyect.astro";
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
     margin-top: 60px;
   }
   h2 {
     font-size: 2.5rem;
     color: crimson;
-
   }
-  .card-pro { 
+  .card-pro {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+  }
+  .aparece {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s ease-out;
+  }
+
+  .aparece.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 </style>

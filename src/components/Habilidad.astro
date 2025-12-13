@@ -1,0 +1,21 @@
+---
+interface Props {
+    href:string;
+    name:string
+}
+const {href, name} = Astro.props;
+---
+
+<div id="hab">
+    <img src={href} alt={name}/>
+    <p>{name}</p>
+</div>
+
+<style>
+    .hab{
+        width: 150px;
+        height: 150px;
+        background: yellowgreen;
+
+    }
+</style>

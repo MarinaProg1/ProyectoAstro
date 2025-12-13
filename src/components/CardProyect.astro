@@ -2,7 +2,6 @@
 import Lenguaje from "../components/Lenguaje.astro";
 
 interface LenguajeType {
-  href: string;
   name: string;
 }
 
@@ -15,33 +14,37 @@ interface Props {
 const { href, titulo, descripcion, lenguajes = [] } = Astro.props;
 ---
 
-<div class="cardPro">
+<script src="/src/scripts/app.js"></script>
+
+<div class="cardPro aparece">
   <img src={href} alt={titulo} />
   <h2>{titulo}</h2>
   <p>{descripcion}</p>
 
   <div class="lenguajes">
-    {lenguajes.map((l) => <Lenguaje href={l.href} name={l.name} />)}
+    {lenguajes.map((l) => <Lenguaje name={l.name} />)}
   </div>
 </div>
 
 <style>
   h2 {
     color: #e3e7b8;
-    font-size: 2rem;
+    font-size: 1.4rem;
+  }
+  p{
+    margin-top: 2px;
   }
   .cardPro {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    /*border: 1px solid #3d3b3c;*/
     border-radius: 20px;
-    background-color: #181833;
+    background-color: rgba(145, 131, 168, 0.123);
     box-shadow: 4px 4px 10px rgba(37, 37, 37, 0.384);
     color: #e3e7b8;
     width: 45%;
-    height: 400px;
+    height: 370px;
     margin: 40px 20px 5px 5px;
   }
   .cardPro img {
@@ -55,9 +58,22 @@ const { href, titulo, descripcion, lenguajes = [] } = Astro.props;
     align-items: center;
     gap: 5px;
   }
+  .aparece {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s ease-out;
+  }
+
+  .aparece.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
   @media (max-width: 768px) {
     .cardPro {
       width: 100%;
+    }
+    .lenguajes{
+      display:flexbox;
     }
   }
 </style>
