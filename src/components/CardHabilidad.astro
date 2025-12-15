@@ -1,0 +1,29 @@
+---
+import Habilidad from "../components/Habilidad.astro";
+
+interface HabilidadType {
+  href:string
+  name: string;
+}
+
+interface Props {
+  habilidades?: HabilidadType[];
+}
+const {habilidades = [] } = Astro.props;
+---
+<script src="/src/scripts/app.js"></script>
+
+<div class="habil">
+
+ {habilidades.map((h) => <Habilidad href={h.href} name={h.name}/>)}
+
+</div>
+
+<style>
+  .habil{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+  }
+</style>

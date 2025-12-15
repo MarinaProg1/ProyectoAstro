@@ -6,16 +6,25 @@ interface Props {
 const {href, name} = Astro.props;
 ---
 
-<div id="hab">
+<div class="hab">
     <img src={href} alt={name}/>
     <p>{name}</p>
 </div>
 
 <style>
     .hab{
-        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
         height: 150px;
-        background: yellowgreen;
+        padding: 10px;
+        background-color: rgba(145, 131, 168, 0.123);
 
+    }
+    .hab img{
+        width: 100px;
+        height: 100px;
     }
 </style>

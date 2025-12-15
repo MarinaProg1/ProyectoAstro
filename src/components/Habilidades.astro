@@ -1,0 +1,35 @@
+---
+import ListaHabilidades from "../components/CardHabilidad.astro";
+
+const habilidades = [
+  {
+    href: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+    name: "C#",
+  },
+  { href: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg", name: "Java" },
+  {
+    href: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
+    name: "Astro",
+  },
+  { href: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg", name: "JavaScript" },
+  { href: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", name: "HTML" },
+  { href: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg", name: "CSS" },
+];
+---
+
+<section id="habilidades">
+  <h2>Habilidades</h2>
+  <ListaHabilidades habilidades={habilidades} />
+</section>
+
+<style>
+    #habilidades{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+    }
+</style>
+
