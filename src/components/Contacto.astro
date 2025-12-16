@@ -1,118 +1,134 @@
 ---
+
 ---
 
- <section id="contact">
-    <h2>Contactame</h2>
-   <div class="contenedor">
-  
-      <div class="form">
-         <img src="/images/message.svg" alt="Mensaje">
-      </div> 
-       <form action="https://formsubmit.co/83665ba2c67d1adb3a6ff6d594614991" method="POST">
-          
-          <div class="input-group">
-             <label for="name">Nombre</label>
-             <input type="text" name="name" id="name" placeholder="Nombre"/>
-             <label for="email">Email</label>
-             <input type="email" name="email" id="email" placeholder="Email"/>
-             <label for="message">Mensaje</label>
-             <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
-             <input class="btn" type="submit" value="Enviar">
+<script src="/src/scripts/app.js"></script>
+<section id="contact" class="aparece">
+  <h2>Contactame</h2>
+  <div class="contenedor">
+    <div class="form">
+      <img src="/images/message.svg" alt="Mensaje" />
+    </div>
+    <form
+      action="https://formsubmit.co/83665ba2c67d1adb3a6ff6d594614991"
+      method="POST"
+    >
+      <div class="input-group">
+        <label for="name"></label>Nombre
 
-             <input type="hidden" name="_next" value="https://porfolioastro.netlify.app/">
-             <input type="hidden" name="_captcha" value="false">
-          </div>
-       </form>
-       </div>
- </section>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Nombre"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <label for="message">Mensaje</label>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="5"
+          placeholder="Mensaje"
+          required></textarea>
+        <input class="btn" type="submit" value="Enviar" />
 
- <style>
-   #contact{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      height: 100%;
-      
-      margin-top: 60px;
-   }
-   
-    h2 {
-    font-size: 2.3rem;
-    color: crimson;
-  }
-   form{
-      padding: 50px 55px;
-      width: 40%;
-      height: 100%;
-       color: beige;
-   }
-   img{
-      width: 500px;
-      height: 500px;
-   }
-   .contenedor {
-  display: flex;
-  background-color: rgba(145, 131, 168, 0.123);
-  border-radius: 10px;
-  width: 80%;
-  border-left: 2px solid #14dcb4;
-  position: relative;
-}
+        <input
+          type="hidden"
+          name="_next"
+          value="https://porfolioastro.netlify.app/"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+      </div>
+    </form>
+  </div>
+</section>
 
-   .input-group{
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-   }
-   input, textarea{
-      padding: 17px 25px;
-       border-radius: 10px;
-       margin-bottom: 20px;
-       outline: none;
-   }
-   .btn{
-      background: rgb(35, 75, 150);
-      color: beige;
-      font-size: 1.2rem;
-   }
-   .btn:hover{
-      transform: scale(1.1);
-      background: blue;
-   }
-   @media (max-width: 768px) {
-
-  .contenedor {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .form {
-    position: absolute;
-    inset: 0;
+<style>
+  #contact {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-   
-  }
-
-  .form img {
-    width: 300px;
-    height: auto;
+    width: 100vw;
+    height: 100%;
+    margin-top: 60px;
   }
 
   form {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    padding: 30px;
-   
+    padding: 50px 55px;
+    width: 40%;
+    height: 100%;
+    color: beige;
   }
-}
+  img {
+    width: 500px;
+    height: 500px;
+  }
+  .contenedor {
+    display: flex;
+    background-color: rgba(145, 131, 168, 0.123);
+    border-radius: 10px;
+    width: 80%;
+    border-left: 2px solid #14dcb4;
+    position: relative;
+  }
 
-      
-   
- </style>
-   
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  input,
+  textarea {
+    padding: 17px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  .btn {
+    background: rgb(35, 75, 150);
+    color: beige;
+    font-size: 1.2rem;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+    background: blue;
+  }
+
+  @media (max-width: 768px) {
+    .contenedor {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .form img {
+      width: 300px;
+      height: auto;
+    }
+
+    form {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 30px;
+    }
+  }
+</style>

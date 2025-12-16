@@ -11,9 +11,9 @@ interface Props {
 }
 const {habilidades = [] } = Astro.props;
 ---
-<script src="/src/scripts/app.js"></script>
 
-<div class="habil aparece">
+
+<div class="habil">
 
  {habilidades.map((h) => <Habilidad href={h.href} name={h.name}/>)}
 
@@ -27,14 +27,5 @@ const {habilidades = [] } = Astro.props;
      
     gap:20px;
   }
-  .aparece {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.7s ease-out;
-  }
-
-  .aparece.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  
 </style>

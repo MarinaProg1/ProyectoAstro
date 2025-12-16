@@ -19,7 +19,7 @@ const { src, titulo, descripcion, lenguajes = [], href } = Astro.props;
 
 <div class="cardPro aparece">
   <img src={src} alt={titulo} />
-  <h2>{titulo}</h2>
+  <h3>{titulo}</h3>
   <p>{descripcion}</p>
 
   <div class="lenguajes">
@@ -29,10 +29,7 @@ const { src, titulo, descripcion, lenguajes = [], href } = Astro.props;
 </div>
 
 <style>
-  h2 {
-    color: #e3e7b8;
-    font-size: 1.4rem;
-  }
+  
   p {
     margin-top: 2px;
   }
@@ -44,7 +41,7 @@ const { src, titulo, descripcion, lenguajes = [], href } = Astro.props;
     border-radius: 20px;
     border-left: 2px solid #14dcb4;
     background-color: rgba(145, 131, 168, 0.123);
-    box-shadow: 4px 4px 10px rgba(37, 37, 37, 0.384);
+    box-shadow: 4px 4px 10px rgba(34, 33, 33, 0.479);
     color: #e3e7b8;
     width: 45%;
     height: 370px;
@@ -61,16 +58,6 @@ const { src, titulo, descripcion, lenguajes = [], href } = Astro.props;
     flex-wrap: wrap;
     align-items: center;
     gap: 5px;
-  }
-  .aparece {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.7s ease-out;
-  }
-
-  .aparece.visible {
-    opacity: 1;
-    transform: translateY(0);
   }
   @media (max-width: 768px) {
     .cardPro {
