@@ -6,24 +6,26 @@ interface LenguajeType {
 }
 
 interface Props {
-  href: string;
+  src: string;
   titulo: string;
   descripcion: string;
   lenguajes?: LenguajeType[];
+  href: string;
 }
-const { href, titulo, descripcion, lenguajes = [] } = Astro.props;
+const { src, titulo, descripcion, lenguajes = [], href } = Astro.props;
 ---
 
 <script src="/src/scripts/app.js"></script>
 
 <div class="cardPro aparece">
-  <img src={href} alt={titulo} />
+  <img src={src} alt={titulo} />
   <h2>{titulo}</h2>
   <p>{descripcion}</p>
 
   <div class="lenguajes">
     {lenguajes.map((l) => <Lenguaje name={l.name} />)}
   </div>
+  <a href={href} target="_blank" rel="noopener noreferrer">Ver codigo</a>
 </div>
 
 <style>
@@ -31,7 +33,7 @@ const { href, titulo, descripcion, lenguajes = [] } = Astro.props;
     color: #e3e7b8;
     font-size: 1.4rem;
   }
-  p{
+  p {
     margin-top: 2px;
   }
   .cardPro {
@@ -55,6 +57,7 @@ const { href, titulo, descripcion, lenguajes = [] } = Astro.props;
   }
   .lenguajes {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 5px;
   }
@@ -72,8 +75,8 @@ const { href, titulo, descripcion, lenguajes = [] } = Astro.props;
     .cardPro {
       width: 100%;
     }
-    .lenguajes{
-      display:flexbox;
+    .lenguajes {
+      display: flexbox;
     }
   }
 </style>

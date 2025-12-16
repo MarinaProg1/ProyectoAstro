@@ -48,7 +48,6 @@ import "@fontsource/ubuntu-mono";
     width: 90%;
   }
 
-  /* ❌ No ocultes los <a> directamente */
   .menu-mobile a,
   .menu-desktop a {
     text-decoration: none;
@@ -58,15 +57,11 @@ import "@fontsource/ubuntu-mono";
     color: #e3e7b8;
     letter-spacing: 1.5px;
   }
-
-  /* Hover */
   .menu-desktop a:hover,
   .menu-mobile a:hover {
     color: crimson;
     transform: scale(1.2);
   }
-
-  /* BOTÓN HAMBURGUESA: oculto en pantallas grandes */
   .menu-toggle {
     display: none;
     font-size: 3rem;
@@ -92,12 +87,9 @@ import "@fontsource/ubuntu-mono";
   }
 
   @media screen and (max-width: 768px) {
-    /* Oculta el menú de escritorio */
     .menu-desktop {
       display: none;
     }
-
-    /* Muestra el botón hamburguesa */
     .menu-toggle {
       display: block;
     }
@@ -114,7 +106,6 @@ import "@fontsource/ubuntu-mono";
     });
   }
 
-  // 🔥 Cierra el menú cuando clickeás un link
   if (links) {
     links.forEach((link) => {
       link.addEventListener("click", () => {
