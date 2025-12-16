@@ -1,7 +1,56 @@
 ---
 ---
 
- <section id="contact" class="dis-col">
-        
-    </section>
+ <section id="contact">
+      <div class="form">
+         <img src="/public/images/message.svg" alt="Mensaje">
+      </div> 
+       <form action="https://formsubmit.co/83665ba2c67d1adb3a6ff6d594614991" method="POST">
+          <h2>Contactame</h2>
+          <div class="input-group">
+             <label for="name">Nombre</label>
+             <input type="text" name="name" id="name" placeholder="Nombre"/>
+             <label for="email">Email</label>
+             <input type="email" name="email" id="email" placeholder="Email"/>
+             <label for="message">Mensaje</label>
+             <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+             <input class="btn" type="submit" value="Enviar">
+
+             <input type="hidden" name="_next" value="https://porfolioastro.netlify.app/">
+             <input type="hidden" name="_captcha" value="false">
+          </div>
+       </form>
+       
+ </section>
+
+ <style>
+   #contact{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(145, 131, 168, 0.123);
+      color: rgb(182, 172, 173);
+      border-radius: 10px;
+      width: 80%;
+      height: 100%;
+      margin-top: 60px;
+   }
+   form{
+      padding: 50px 55px;
+     
+      width: 40%;
+   }
+
+   .input-group{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+   }
+   input, textarea{
+      padding: 17px 25px;
+       border-radius: 10px;
+       margin-bottom: 20px;
+       outline: none;
+   }
+ </style>
    
