@@ -2,11 +2,14 @@
 ---
 
  <section id="contact">
+    <h2>Contactame</h2>
+   <div class="contenedor">
+  
       <div class="form">
          <img src="/images/message.svg" alt="Mensaje">
       </div> 
        <form action="https://formsubmit.co/83665ba2c67d1adb3a6ff6d594614991" method="POST">
-          <h2>Contactame</h2>
+          
           <div class="input-group">
              <label for="name">Nombre</label>
              <input type="text" name="name" id="name" placeholder="Nombre"/>
@@ -20,26 +23,41 @@
              <input type="hidden" name="_captcha" value="false">
           </div>
        </form>
-       
+       </div>
  </section>
 
  <style>
    #contact{
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: rgba(145, 131, 168, 0.123);
-      color: rgb(182, 172, 173);
-      border-radius: 10px;
-      width: 80%;
+      width: 100vw;
       height: 100%;
       margin-top: 60px;
    }
+   
+    h2 {
+    font-size: 2.3rem;
+    color: crimson;
+  }
    form{
       padding: 50px 55px;
-     
       width: 40%;
+      height: 100%;
+       color: beige;
    }
+   img{
+      width: 500px;
+      height: 500px;
+   }
+   .contenedor {
+  display: flex;
+  background-color: rgba(145, 131, 168, 0.123);
+  border-radius: 10px;
+  width: 80%;
+  position: relative;
+}
 
    .input-group{
       display: flex;
@@ -52,5 +70,47 @@
        margin-bottom: 20px;
        outline: none;
    }
+   .btn{
+      background: rgb(35, 75, 150);
+      color: beige;
+      font-size: 1.2rem;
+   }
+   .btn:hover{
+      transform: scale(1.1);
+      background: blue;
+   }
+   @media (max-width: 768px) {
+
+  .contenedor {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+   
+  }
+
+  .form img {
+    width: 300px;
+    height: auto;
+  }
+
+  form {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 30px;
+   
+  }
+}
+
+      
+   
  </style>
    
