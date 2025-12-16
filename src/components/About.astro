@@ -2,13 +2,13 @@
 ---
 
     <div class="about - aparece">
-      
+      <h2>Sobre mí</h2>
+      <div class="content-about">
       <div class="imagen">
         <img src="/images/mifoto3.png" alt="mi foto" />
       </div>
       
       <div class="text">
-        <h2>Sobre mí</h2>
         <p>
           Mi nombre es Marina López, egresada de la Tecnicatura en Programación
           de la Universidad Tecnológica Nacional. Soy desarrolladora Full Stack
@@ -35,7 +35,7 @@
           búsqueda de aprendizaje y mejora profesional.
         </p>
       </div>
-      
+      </div>
     </div>
 <style>
  
@@ -45,36 +45,41 @@
   }
 
   h2 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
     color: crimson;
 
   }
 
   .about {
     display: flex;
-    background-color: rgba(145, 131, 168, 0.123);
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; 
-    width: 80%;
+    width: 100vw;
     font-size: 16px;
     height: 100%;
+  }
+  .content-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(145, 131, 168, 0.123);
+    border-left: 2px solid #14dcb4;
     padding: 20px 10px 10px 10px;
-    border: 2px solid #;
-    border-radius: 20px;*/
-    text-align: center; 
+    width: 80%;
     gap: 10px;
   }
   .text{
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    text-align: center;*/
     margin: 10px;
     padding: 10px;
     width: 70%;
     height: 80%;
-    text-align: center;
+    text-align:start;
     animation: irIzquierda 2s ease forwards;
   }
   .imagen{
@@ -117,6 +122,9 @@
     flex-direction: column;
     width: 100%;
    
+  }
+  .content-about{
+    flex-direction: column;
   }
 .text{
     width: 95%;
