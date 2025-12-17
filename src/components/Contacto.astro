@@ -3,8 +3,8 @@
 ---
 
 <script src="/src/scripts/app.js"></script>
-<section id="contact" class="aparece">
-  <h2>Contactame</h2>
+<section id="contact" >
+  <h2 class="aparece">CONTACTO</h2>
   <div class="contenedor">
     <div class="form">
       <img src="/images/message.svg" alt="Mensaje" />
@@ -50,6 +50,14 @@
       </div>
     </form>
   </div>
+  <p id="mensaje-enviado" class="oculto">
+  ¡Gracias! Tu mensaje fue enviado correctamente.
+  </p>
+  <div class="cv">
+    <img src="/public/images/archivo.png" alt="Icono de descarga">
+        <a href="/src/assets/miCv.pdf" download>
+       Descarga mi CV</a>
+</div>
 </section>
 
 <style>
@@ -103,7 +111,28 @@
     transform: scale(1.1);
     background: blue;
   }
+  .oculto {
+  display: none;
+}
 
+#mensaje-enviado {
+  color: #14dcb4;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-align: center;
+}
+ .cv{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 20px;
+  }
+  .cv img{
+    width: 40px;
+    height: 40px;
+  }
+  
   @media (max-width: 768px) {
     .contenedor {
       justify-content: center;

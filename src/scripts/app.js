@@ -1,4 +1,6 @@
 const elementos = document.querySelectorAll(".aparece");
+const form = document.getElementById("contact-form");
+const mensaje = document.getElementById("mensaje-enviado");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -11,3 +13,7 @@ const elementos = document.querySelectorAll(".aparece");
   });
 
   elementos.forEach(el => observer.observe(el));
+
+  form.addEventListener("submit", () => {
+  mensaje.style.display = "block";
+});
