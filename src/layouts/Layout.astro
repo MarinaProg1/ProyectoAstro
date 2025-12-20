@@ -93,7 +93,6 @@ import "../styles/global.css";
     height: 100vh;
     z-index: -2;
     background-color: #1a1a36;
-   /* background-image: radial-gradient(#64625fb7 1px, #181833 1px);*/
     background-size: 80px 80px;
   }
 
@@ -122,5 +121,11 @@ import "../styles/global.css";
       transform: scale(1);
       opacity: 1;
     }
+  }
+  @media(max-width: 768px) {
+    footer{
+      flex-direction: column;
+    }
+    
   }
 </style>
