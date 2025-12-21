@@ -3,13 +3,14 @@
 ---
 
 <script src="/src/scripts/app.js"></script>
-<section id="contact" >
+<section id="contact">
   <h2 class="aparece">CONTACTO</h2>
   <div class="contenedor">
     <div class="form">
       <img src="/images/imagenPie.svg" alt="Imagen descorativa" />
     </div>
     <form
+      id="contact-form"
       action="https://formsubmit.co/83665ba2c67d1adb3a6ff6d594614991"
       method="POST"
     >
@@ -40,31 +41,31 @@
           placeholder="Mensaje"
           required></textarea>
         <input class="btn" type="submit" value="Enviar" />
+        <p id="mensaje-enviado" class="oculto">
+          ¡Gracias! Tu mensaje fue enviado correctamente.
+        </p>
 
-        <input
+        <!--<input
           type="hidden"
           name="_next"
-          value="https://porfolioastro.netlify.app/"
-        />
+          value="https://porfolioastro.netlify.app/#contactame"
+        />-->
         <input type="hidden" name="_captcha" value="false" />
       </div>
     </form>
   </div>
-  <p id="mensaje-enviado" class="oculto">
-  ¡Gracias! Tu mensaje fue enviado correctamente.
-  </p>
+
   <div class="cv">
-    <img src="/images/archivo.png" alt="Icono de descarga">
-        <a href="/src/assets/miCv.pdf" download>
-       Descarga mi CV</a>
-</div>
+    <img src="/images/archivo.png" alt="Icono de descarga" />
+    <a href="/src/assets/miCv.pdf" download> Descarga mi CV</a>
+  </div>
 </section>
 
 <style>
   #contact {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100%;
@@ -113,27 +114,27 @@
     background: blue;
   }
   .oculto {
-  display: none;
-}
-
-#mensaje-enviado {
-  color: #14dcb4;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  text-align: center;
-}
- .cv{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   margin: 20px;
+    display: none;
   }
-  .cv img{
+
+  #mensaje-enviado {
+    color: #14dcb4;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .cv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .cv img {
     width: 40px;
     height: 40px;
   }
-  
+
   @media (max-width: 768px) {
     .contenedor {
       width: 90%;

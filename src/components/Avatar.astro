@@ -316,52 +316,53 @@
     height: 90%;
     display: block;
   }
+  
   .images {
-    position: absolute;
-    inset: 0; /* ocupa todo el .content */
-    pointer-events: none; /* deja pasar clicks al svg por defecto */
-    display: block;
-    --n: var(--n-images);
-    --r: var(--orbit-radius);
-    transform-origin: 50% 50%; /* rotación global opcional: si querés quitar, comentar animation */
-    animation: spin 18s linear infinite;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
 
-  }
-  .images img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    pointer-events: auto;
-    --angle: calc((360deg / var(--n)) * var(--i)); /* rotate(angle) coloca el elemento en la dirección; translateX separa radialmente; rotate(-angle) mantiene la imagen orientada derecha */
-    transform: rotate(var(--angle)) translateX(var(--r))
-      rotate(calc(-1 * var(--angle)));
-    transform-origin: 0 0;
-    transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.2, 1);
-    filter 0.18s ease;
-    z-index: 5;
-    /*filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));*/
-  }
-  .images img:hover {
-    transform: rotate(var(--angle)) translateX(calc(var(--r) + 8px))
-      rotate(calc(-1 * var(--angle))) scale(1.25);
-    z-index: 50;
-    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
-  } /* stagger visual: pequeños delays para la animación global (si gustas) */
-  .images img {
-    animation: none;
-  }
+/* imágenes orbitando con path */
+.images img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  pointer-events: auto;
+  z-index: 5;
 
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  /* PATH CIRCULAR REAL */
+  offset-path: path(
+    "M 0 -260 A 260 260 0 1 1 0 260 A 260 260 0 1 1 0 -260"
+  );
+
+  offset-rotate: auto;
+  animation: orbit 22s linear infinite;
+  animation-delay: calc(var(--i) * -2.2s);
+
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* hover */
+.images img:hover {
+  transform: scale(1.25);
+  z-index: 50;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+/* animación real */
+@keyframes orbit {
+  from {
+    offset-distance: 0%;
   }
+  to {
+    offset-distance: 100%;
+  }
+}
+ 
   #pariris {
     transition: ease;
     animation: mover 5s ease infinite alternate-reverse;
@@ -398,19 +399,23 @@
     }
   }
   @media (max-width: 640px) {
-    :root {
-      --avatar-width: min(420px, 92vw);
-      --orbit-radius: 50vw;
-    }
+    
     .tamanio-cont {
       transform: scale(0.6);
       transform-origin: center;
     }
     .content {
-   
     margin: 0rem auto ;
    
   } 
+  .images img {
+    width: 40px;
+    height: 40px;
+
+    offset-path: path(
+      "M 0 -200 A 200 200 0 1 1 0 200 A 200 200 0 1 1 0 -200"
+    );
     
   }
+}
 </style>
