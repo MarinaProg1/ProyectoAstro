@@ -1,0 +1,23 @@
+---
+interface Props{
+    titulo: string;
+    }
+const {titulo}= Astro.props;
+---
+
+<h2 class="aparece">{titulo}</h2>
+
+<style>
+   h2 {
+    font-size: 3rem;
+    letter-spacing: 10px;
+    color: crimson;
+  }
+  @media (max-width: 768px){
+    h2 {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    color: crimson;
+  }
+}
+</style>

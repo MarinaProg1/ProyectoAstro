@@ -1,5 +1,6 @@
 ---
 import ListaHabilidades from "../components/CardHabilidad.astro";
+import TituloSection from "./TituloSection.astro";
 
 const habilidades = [
   {
@@ -33,7 +34,7 @@ const habilidades = [
 ---
 <script src="/src/scripts/app.js"></script>
 <section id="habilidades">
-  <h2 class="aparece">HABILIDADES</h2>
+  <TituloSection titulo="HABILIDADES"/>
   <ListaHabilidades habilidades={habilidades} />
 </section>
 
