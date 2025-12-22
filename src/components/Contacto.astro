@@ -15,8 +15,7 @@
       method="POST"
     >
       <div class="input-group">
-        <label for="name"></label>Nombre
-
+        <label for="name">Nombre </label>
         <input
           type="text"
           name="name"
@@ -45,16 +44,10 @@
           ¡Gracias! Tu mensaje fue enviado correctamente.
         </p>
 
-        <!--<input
-          type="hidden"
-          name="_next"
-          value="https://porfolioastro.netlify.app/#contactame"
-        />-->
         <input type="hidden" name="_captcha" value="false" />
       </div>
     </form>
   </div>
-
   <div class="cv">
     <img src="/images/archivo.png" alt="Icono de descarga" />
     <a href="/src/assets/miCv.pdf" download> Descarga mi CV</a>
@@ -71,16 +64,19 @@
     height: 100%;
     margin-top: 60px;
   }
-
   form {
     padding: 50px 55px;
     width: 40%;
     height: 100%;
     color: beige;
   }
-  img {
+  .form img {
     width: 400px;
     height: 500px;
+    transition: transform 0.6s ease;
+  }
+  .form img:hover {
+    transform: rotateY(360deg);
   }
   .contenedor {
     display: flex;
@@ -91,7 +87,6 @@
     border-left: 2px solid #14dcb4;
     position: relative;
   }
-
   .input-group {
     display: flex;
     flex-direction: column;
@@ -116,7 +111,6 @@
   .oculto {
     display: none;
   }
-
   #mensaje-enviado {
     color: #14dcb4;
     font-size: 1.2rem;
@@ -134,31 +128,22 @@
     width: 40px;
     height: 40px;
   }
-
   @media (max-width: 768px) {
     .contenedor {
       width: 90%;
       justify-content: center;
       align-items: center;
     }
-
     .form {
-      position: absolute;
-      inset: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 1;
     }
-
     .form img {
       width: 300px;
       height: auto;
     }
-
     form {
-      position: relative;
-      z-index: 2;
       width: 100%;
       padding: 30px;
     }
