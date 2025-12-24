@@ -20,7 +20,7 @@ import "../styles/global.css";
       <slot />
     </main>
     <footer>
-      <div><p>© 2025 Marina Natalia López. Hecho con ❤️ y código.</p></div>
+      <div><p>© 2025 Marina Natalia López.</p></div>
       <div>
         <a
           href="https://www.linkedin.com/in/marina-lopez-a257b9319"
@@ -48,7 +48,6 @@ import "../styles/global.css";
         >
       </div>
     </footer>
-
   </body>
 </html>
 <style>
@@ -86,7 +85,6 @@ import "../styles/global.css";
     height: 150px;
     animation: aparecer 4s ease;
   }
-  
 
   .aparece {
     opacity: 0;
@@ -99,7 +97,6 @@ import "../styles/global.css";
     transform: translateY(0);
   }
 
-  
   @keyframes aparecer {
     0% {
       transform: scale(0);
@@ -110,10 +107,9 @@ import "../styles/global.css";
       opacity: 1;
     }
   }
-  @media(max-width: 768px) {
-    footer{
+  @media (max-width: 768px) {
+    footer {
       flex-direction: column;
     }
-    
   }
 </style>
